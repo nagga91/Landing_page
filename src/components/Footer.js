@@ -39,7 +39,7 @@ function Footer() {
               
               <Input placeholder="Your Email..." type="text"></Input>
             </InputGroup>
-            <button class="btn btn-primary">Subscribe</button>
+            <button className="btn btn-primary">Subscribe</button>
           </Form>
         </Container>
       </Navbar>

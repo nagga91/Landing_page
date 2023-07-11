@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import {Button,UncontrolledTooltip,UncontrolledAccordion,Accordion,AccordionBody,AccordionHeader,AccordionItem, CardGroup, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, CardImgOverlay, CardLink, CardFooter,} from 'reactstrap';
+import React from 'react'
+import {Button,UncontrolledTooltip,UncontrolledAccordion,AccordionBody,AccordionHeader,AccordionItem, Card, CardImg, CardBody, CardTitle, CardText, CardImgOverlay, CardLink, CardFooter,} from 'reactstrap';
 import { TfiReload } from 'react-icons/tfi';
 import Sliders from './Sliders';
-import {MdOutlineAddShoppingCart} from "react-icons/md";
-import { Link } from 'react-router-dom';
+
 function Home({data}) {
   console.log(data)
   return (
@@ -81,8 +80,8 @@ function Home({data}) {
     </div>
         </div>
   <div style={{}}> 
-  {data.map(el=>
-    <Card style={{ width: "18rem",margin: '0.5rem' }}>
+  {data.map((el,index)=>
+    <Card key={index} style={{ width: "18rem",margin: '0.5rem' }}>
     <CardImg
       alt="Card image cap"
       src={el.imageUrl}
@@ -100,14 +99,14 @@ function Home({data}) {
       <CardText>
       <div style={{display:'flex'}}>
         <span>Prix £</span>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
-</button>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+          <i className="now-ui-icons ui-2_favourite-28"></i>
+        </button>
       </div>
       </CardText>
     </CardBody>
   </Card>
-    )}   
+  )}   
   
   <Card style={{ width: "18rem",margin: '0.5rem' }}>
     <CardImg
@@ -127,8 +126,8 @@ function Home({data}) {
       <CardText>
       <div style={{display:'flex'}}>
         <span>Prix £</span>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+  <i className="now-ui-icons ui-2_favourite-28"></i>
 </button>
       </div>
       </CardText>
@@ -154,8 +153,8 @@ function Home({data}) {
       <CardText>
       <div style={{display:'flex'}}>
         <span>Prix £</span>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+  <i className="now-ui-icons ui-2_favourite-28"></i>
 </button>
       </div>
       </CardText>
@@ -165,7 +164,7 @@ function Home({data}) {
         
   </div>
       <div>
-      <button class="btn btn-primary btn-round">Load more...</button>
+      <button className="btn btn-primary btn-round">Load more...</button>
       </div>
       <div style={{marginTop:"5%",display:'flex',marginLeft:'5%'}}>
         <h2 >News in fashion</h2>
@@ -230,9 +229,9 @@ function Home({data}) {
       <div style={{display:'flex'}}>
       <span style={{ textDecoration: 'line-through' }}>£200</span>
         <p style={{color:'OrangeRed'}}>£100</p>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
-</button>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+        <i className="now-ui-icons ui-2_favourite-28"></i>
+        </button>
       </div>
       </CardText>
     </CardBody>
@@ -254,11 +253,11 @@ function Home({data}) {
       </CardText>
       <CardText>
       <div style={{display:'flex'}}>
-      <span style={{ textDecoration: 'line-through' }}>£200</span>
+        <span style={{ textDecoration: 'line-through' }}>£200</span>
         <p style={{color:'OrangeRed'}}>£100</p>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
-</button>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+          <i className="now-ui-icons ui-2_favourite-28"></i>
+        </button>
       </div>
       </CardText>
       
@@ -284,8 +283,8 @@ function Home({data}) {
       <div style={{display:'flex'}}>
       <span style={{ textDecoration: 'line-through' }}>£200</span>
         <p style={{color:'OrangeRed'}}>£100</p>
-        <button class="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
-  <i class="now-ui-icons ui-2_favourite-28"></i>
+        <button className="btn btn-primary btn-icon btn-round" style={{marginLeft:'60%'}}>
+  <i className="now-ui-icons ui-2_favourite-28"></i>
 </button>
       </div>
       </CardText>

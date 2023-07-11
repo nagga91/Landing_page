@@ -14,7 +14,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { FormGroup, Input, Label } from 'reactstrap';
+import { FormGroup, Input } from 'reactstrap';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 const drawerWidth = 240;
@@ -69,7 +69,14 @@ function DrawerAppBar(props) {
           >
             Jihed
           </Typography>
-          
+          <FormGroup style={{marginTop:'2%',marginRight:'20%'}}>
+            <Input
+              id="exampleSearch"
+              name="search"
+              placeholder="search placeholder"
+              type="search"
+              />
+          </FormGroup>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
@@ -77,14 +84,7 @@ function DrawerAppBar(props) {
               </Button>
             ))}
           </Box>
-          <FormGroup>
-    <Input
-      id="exampleSearch"
-      name="search"
-      placeholder="search placeholder"
-      type="search"
-    />
-  </FormGroup>
+  
   <IconButton color="default" aria-label="add to shopping cart">
   <AddShoppingCartIcon />
 </IconButton>

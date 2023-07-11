@@ -51,8 +51,8 @@ function Carosel(){
       activeIndex={activeIndex}
       next={next}
       previous={previous}
-      slide="true"
-      fade="true"
+      slide = {true}
+      fade = {true}
     >
         <CarouselIndicators
           items={items}
